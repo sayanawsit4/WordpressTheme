@@ -1,0 +1,5 @@
+{
+	"domain": "myknowledgebox.co.in",
+	"certUrl": "https://acme-v02.api.letsencrypt.org/acme/cert/0353a90b50252dedf9627bd8f36f36257607",
+	"certStableUrl": "https://acme-v02.api.letsencrypt.org/acme/cert/0353a90b50252dedf9627bd8f36f36257607"
+}

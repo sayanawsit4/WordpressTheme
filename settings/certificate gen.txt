@@ -1,0 +1,27 @@
+189  cp bitnami.conf bitnami.conf_actual
+  190  nano bitnami.conf
+  191  sudo nano bitnami
+  192  sudo nano bitnami.conf
+  193  sudo /opt/bitnami/ctlscript.sh restart apache
+  194  sudo /opt/bitnami/ctlscript.sh restart
+  195  sudo nano bitnami.conf
+  196  clear
+  197  sudo lego --tls --email="sayannayas@gmail.com" --domains="myknowledgebox.co.in" --domains="*.myknowledgebox.co.in" --path="/etc/lego" run
+  198  sudo lego --tls --email="sayannayas@gmail.com" --domains="myknowledgebox.co.in" --domains="www.myknowledgebox.co.in" --path="/etc/lego" run
+  199  sudo /opt/bitnami/ctlscript.sh stop
+  200  sudo lego --tls --email="sayannayas@gmail.com" --domains="myknowledgebox.co.in" --domains="www.myknowledgebox.co.in" --path="/etc/lego" run
+  201  clear
+  202  sudo mv /opt/bitnami/apache2/conf/server.crt /opt/bitnami/apache2/conf/server.crt.old
+  203  sudo mv /opt/bitnami/apache2/conf/server.key /opt/bitnami/apache2/conf/server.key.old
+  204  sudo mv /opt/bitnami/apache2/conf/server.csr /opt/bitnami/apache2/conf/server.csr.old
+  205  sudo ln -s /etc/lego/certificates/myknowledgebox.co.in.key /opt/bitnami/apache2/conf/server.key
+  206  sudo ln -s /etc/lego/certificates/myknowledgebox.co.in.crt /opt/bitnami/apache2/conf/server.crt
+  207  sudo ln -s /etc/lego/certificates/myknowledgebox.co.in.issuer.crt /opt/bitnami/apache2/conf/issuer.crt
+  208  rm /opt/bitnami/apache2/conf/issuer.crt
+  209  sudo ln -s /etc/lego/certificates/myknowledgebox.co.in.issuer.crt /opt/bitnami/apache2/conf/issuer.crt
+  210  sudo /opt/bitnami/ctlscript.sh start
+  211  nano bitnami.conf
+  212  sudo /opt/bitnami/ctlscript.sh restart
+  213  nano bitnami.conf
+  214  sudo /opt/bitnami/ctlscript.sh restart
+  215  nano bitnami.conf
